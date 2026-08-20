@@ -1,0 +1,33 @@
+{
+  "heroStreetSign": { "src": "", "alt": "New York street sign" },
+  "heroPoster": { "src": "assets/background/poster1.avif", "alt": "New York event poster" },
+  "heroSubway": { "src": "", "alt": "New York subway texture" },
+
+  "featuredRooftopParty": { "src": "", "alt": "Rooftop party" },
+  "featuredNightMarket": { "src": "", "alt": "Queens Night Market" },
+  "featuredComedy": { "src": "", "alt": "Comedy event" },
+  "featuredMovieNight": { "src": "", "alt": "Outdoor movie night" },
+  "featuredLiveMusic": { "src": "", "alt": "Live music event" },
+  "featuredArtPopup": { "src": "", "alt": "Art pop-up" },
+
+  "boroughManhattan": { "src": "", "alt": "Manhattan" },
+  "boroughBrooklyn": { "src": "", "alt": "Brooklyn" },
+  "boroughQueens": { "src": "", "alt": "Queens" },
+  "boroughBronx": { "src": "", "alt": "The Bronx" },
+  "boroughStatenIsland": { "src": "", "alt": "Staten Island" },
+
+  "weekendWarehouseParty": { "src": "", "alt": "Warehouse party" },
+  "weekendSohoArtWalk": { "src": "", "alt": "SoHo art walk" },
+  "weekendIndieNight": { "src": "", "alt": "Indie night" },
+  "weekendBrooklynFlea": { "src": "", "alt": "Brooklyn Flea" },
+  "weekendComedyUnderground": { "src": "", "alt": "Comedy Underground" },
+  "weekendQueensFoodCrawl": { "src": "", "alt": "Queens food crawl" },
+
+  "freeMovieNight": { "src": "", "alt": "Free movie night" },
+  "freeOpenStreets": { "src": "", "alt": "Open Streets festival" },
+  "freeOutdoorJazz": { "src": "", "alt": "Outdoor jazz" },
+  "freeBrooklynArtMarket": { "src": "", "alt": "Brooklyn art market" },
+
+  "submitPoster": { "src": "", "alt": "Street poster" },
+  "newsletterPoster": { "src": "", "alt": "Newspaper poster" }
+}

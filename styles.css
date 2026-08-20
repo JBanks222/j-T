@@ -225,6 +225,19 @@ select:focus-visible {
   border: 4px solid var(--border);
 }
 
+.asset-placeholder.is-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 0;
+  color: transparent;
+  font-size: 0;
+}
+
+.asset-placeholder.is-image span {
+  display: none;
+}
+
 
 /* ===============================
    HEADER

@@ -1,4 +1,49 @@
 /* =========================================
+   IMAGE CONFIGURATION
+
+   Image paths and alt text live in
+   assets/images.json so they can be changed
+   without editing the page markup.
+========================================= */
+
+async function loadConfiguredImages() {
+
+  try {
+
+    const response = await fetch("assets/images.json");
+
+    if (!response.ok) {
+      throw new Error(`Image config request failed: ${response.status}`);
+    }
+
+    const imageConfig = await response.json();
+
+    document.querySelectorAll("[data-image]").forEach(slot => {
+
+      const image = imageConfig[slot.dataset.image];
+
+      if (!image || !image.src) {
+        return;
+      }
+
+      slot.style.backgroundImage = `url("${encodeURI(image.src)}")`;
+      slot.classList.add("is-image");
+      slot.setAttribute("role", "img");
+      slot.setAttribute("aria-label", image.alt || "");
+
+    });
+
+  } catch (error) {
+    console.error("Unable to load image configuration.", error);
+  }
+
+}
+
+
+loadConfiguredImages();
+
+
+/* =========================================
    SAMPLE EVENT DATA
 
    FUTURE:
