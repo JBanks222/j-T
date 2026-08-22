@@ -1,7 +1,6 @@
 {
-  "heroStreetSign": { "src": "", "alt": "New York street sign" },
   "heroPoster": { "src": "assets/background/poster1.avif", "alt": "New York event poster" },
-  "heroSubway": { "src": "", "alt": "New York subway texture" },
+  "heroSubway": { "src": "assets/background/poster4.webp", "alt": "New York subway texture" },
 
   "featuredRooftopParty": { "src": "", "alt": "Rooftop party" },
   "featuredNightMarket": { "src": "", "alt": "Queens Night Market" },
