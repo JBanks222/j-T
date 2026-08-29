@@ -340,12 +340,22 @@ select:focus-visible {
 
   overflow: hidden;
   border-bottom: 3px solid var(--border);
+  background-image: url("assets/background/nycposterresized.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  isolation: isolate;
 }
 
 .hero-content {
   position: relative;
   z-index: 5;
   padding: 6rem 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {

@@ -1,6 +1,8 @@
 {
-  "heroPoster": { "src": "assets/background/poster1.avif", "alt": "New York event poster" },
-  "heroSubway": { "src": "assets/background/poster4.webp", "alt": "New York subway texture" },
+  "heroPoster": { "src": "assets/background/nyc poster.png", "alt": "New York City poster" },
+  "heroPosterLeft": { "src": "assets/background/poster1.avif", "alt": "NYC live music poster" },
+  "heroPosterMiddle": { "src": "assets/background/nyc poster.png", "alt": "NYC poster map" },
+  "heroPosterRight": { "src": "assets/background/poster3.png", "alt": "NYC art and culture poster" },
 
   "featuredRooftopParty": { "src": "", "alt": "Rooftop party" },
   "featuredNightMarket": { "src": "", "alt": "Queens Night Market" },
