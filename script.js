@@ -183,7 +183,15 @@ footerSignIn.addEventListener("click", () => {
   if (!isLoggedIn) {
     fakeSignIn();
   } else {
-    console.log("Open profile page.");
+    window.location.href = "profile/profile.html";
+  }
+
+});
+
+profileButton.addEventListener("click", () => {
+
+  if (isLoggedIn) {
+    window.location.href = "profile/profile.html";
   }
 
 });
