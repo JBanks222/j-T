@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — NYC Events</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+
+<body>
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="site-name">
+        NYC EVENTS
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Discover</a>
+        <a href="#">Events</a>
+        <a href="#">This Weekend</a>
+
+        <button class="submit-event-nav" id="openSubmitEvent">
+          + Submit Something
+        </button>
+
+        <button class="logout-button" id="logoutButton">
+          Log Out
+        </button>
+
+        <button class="profile-avatar-small" aria-label="Profile">
+          JB
+        </button>
+      </nav>
+
+      <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================
+       PROFILE HERO
+  ========================================== -->
+
+  <main>
+
+    <section class="profile-hero">
+
+      <div class="container profile-hero-grid">
+
+        <div class="profile-identity">
+
+          <div class="profile-photo-wrapper">
+
+            <div class="profile-photo">
+              JB
+            </div>
+
+            <button
+              class="change-photo-button"
+              type="button"
+              aria-label="Change profile picture"
+            >
+              +
+            </button>
+
+          </div>
+
+          <div class="profile-name">
+
+            <p class="eyebrow">
+              NEW YORK EXPLORER
+            </p>
+
+            <h1>Jalen</h1>
+
+            <p class="profile-handle">
+              @jaleninnyc
+            </p>
+
+            <p class="profile-bio">
+              Finding good food, strange events and
+              things worth getting on the train for.
+            </p>
+
+            <button
+              class="edit-profile-button"
+              id="editProfileButton"
+            >
+              Edit Profile
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- STREET SIGN PROFILE DECORATION -->
+
+        <div class="profile-sign-area">
+
+          <div class="asset-placeholder asset-placeholder--street-sign">
+            CUSTOM NYC STREET SIGN
+            <span>PROFILE ASSET</span>
+          </div>
+
+          <div class="profile-stats">
+
+            <div>
+              <strong>24</strong>
+              <span>Saved</span>
+            </div>
+
+            <div>
+              <strong>7</strong>
+              <span>Plans</span>
+            </div>
+
+            <div>
+              <strong>3</strong>
+              <span>Uploads</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         DASHBOARD NAV
+    ========================================== -->
+
+    <section class="dashboard-nav-section">
+
+      <div class="container">
+
+        <nav
+          class="dashboard-tabs"
+          aria-label="Profile dashboard"
+        >
+
+          <button
+            class="dashboard-tab active"
+            data-panel="plans"
+          >
+            My Plans
+          </button>
+
+          <button
+            class="dashboard-tab"
+            data-panel="saved"
+          >
+            Saved
+          </button>
+
+          <button
+            class="dashboard-tab"
+            data-panel="uploads"
+          >
+            My Uploads
+          </button>
+
+          <button
+            class="dashboard-tab"
+            data-panel="friends"
+          >
+            Friends
+          </button>
+
+        </nav>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PLANS PANEL
+    ========================================== -->
+
+    <section
+      class="dashboard-panel active"
+      id="plansPanel"
+      data-dashboard-panel="plans"
+    >
+
+      <div class="container">
+
+        <div class="panel-heading">
+
+          <div>
+            <p class="eyebrow">
+              YOUR NYC
+            </p>
+
+            <h2>
+              Plans & Itineraries
+            </h2>
+
+            <p>
+              Build a day, invite your people,
+              then figure out the rest later.
+            </p>
+          </div>
+
+          <button
+            class="primary-button"
+            id="createPlanButton"
+          >
+            + Build a Plan
+          </button>
+
+        </div>
+
+
+        <div class="dashboard-layout">
+
+          <!-- =====================================
+               ITINERARIES SIDEBAR
+          ====================================== -->
+
+          <aside class="plans-sidebar">
+
+            <div class="sidebar-heading">
+              <span>Your Plans</span>
+              <strong id="planCount">3</strong>
+            </div>
+
+            <div id="planList"></div>
+
+            <button class="new-plan-card" id="sidebarCreatePlan">
+              + New Plan
+            </button>
+
+          </aside>
+
+
+          <!-- =====================================
+               ITINERARY BUILDER
+          ====================================== -->
+
+          <section class="itinerary-builder">
+
+            <header class="itinerary-header">
+
+              <div>
+
+                <div class="itinerary-label">
+                  <span class="status-dot"></span>
+                  SATURDAY PLAN
+                </div>
+
+                <h2>
+                  Oyster Bar Hopping
+                </h2>
+
+                <p>
+                  August 29 · Manhattan
+                </p>
+
+              </div>
+
+
+              <div class="itinerary-actions">
+
+                <button
+                  class="secondary-button"
+                  id="inviteFriendsButton"
+                >
+                  + Invite
+                </button>
+
+                <label class="privacy-control">
+
+                  <span>
+                    Private
+                  </span>
+
+                  <input
+                    type="checkbox"
+                    id="privacyToggle"
+                  />
+
+                  <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                  </span>
+
+                  <span>
+                    Public
+                  </span>
+
+                </label>
+
+                <button
+                  class="more-button"
+                  aria-label="More plan options"
+                >
+                  •••
+                </button>
+
+              </div>
+
+            </header>
+
+
+            <!-- PEOPLE -->
+
+            <div class="collaborators">
+
+              <span class="collaborator-label">
+                Planning with
+              </span>
+
+              <div class="avatar-stack">
+
+                <button
+                  class="friend-avatar"
+                  title="Jalen"
+                >
+                  JB
+                </button>
+
+                <button
+                  class="friend-avatar friend-avatar-alt"
+                  title="Maya"
+                >
+                  M
+                </button>
+
+                <button
+                  class="friend-avatar friend-avatar-alt-2"
+                  title="Chris"
+                >
+                  C
+                </button>
+
+                <button
+                  class="add-friend-avatar"
+                  id="addFriendAvatar"
+                  title="Invite friend"
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================
+                 STREET / SUBWAY DIVIDER
+            ================================== -->
+
+            <div class="city-divider">
+
+              <div class="asset-placeholder asset-placeholder--subway">
+                SUBWAY / STREET DIVIDER ASSET
+              </div>
+
+            </div>
+
+
+            <!-- =================================
+                 ITINERARY TIMELINE
+            ================================== -->
+
+            <div
+              class="itinerary-timeline"
+              id="itineraryTimeline"
+            >
+              <div id="itineraryList"></div>
+
+              <button
+                class="add-stop-button"
+                id="addStopButton"
+              >
+                <span>+</span>
+
+                Add another stop
+              </button>
+            </div>
+
+          </section>
+
+
+          <!-- =====================================
+               SAVED SIDE PANEL
+          ====================================== -->
+
+          <aside class="saved-sidebar">
+
+            <div class="saved-sidebar-header">
+
+              <div>
+                <p class="eyebrow">
+                  YOUR POCKET
+                </p>
+
+                <h3>
+                  Saved Stuff
+                </h3>
+              </div>
+
+              <a href="#">
+                View All
+              </a>
+
+            </div>
+
+            <p class="saved-helper">
+              Add saved events and places directly
+              into this plan.
+            </p>
+
+
+            <div
+              class="saved-mini-list"
+              id="savedMiniList"
+            >
+
+
+              <article class="saved-mini-card">
+
+                <div class="saved-mini-image">
+
+                  <div
+                    class="asset-placeholder
+                           asset-placeholder--poster"
+                  >
+                    EVENT
+                  </div>
+
+                </div>
+
+                <div>
+
+                  <span>
+                    NIGHTLIFE
+                  </span>
+
+                  <strong>
+                    Rooftop Party
+                  </strong>
+
+                  <small>
+                    Williamsburg
+                  </small>
+
+                  <button
+                    class="add-to-plan-button"
+                    data-title="Rooftop Party"
+                  >
+                    + Add
+                  </button>
+
+                </div>
+
+              </article>
+
+
+              <article class="saved-mini-card">
+
+                <div class="saved-mini-image">
+
+                  <div
+                    class="asset-placeholder
+                           asset-placeholder--photo"
+                  >
+                    PLACE
+                  </div>
+
+                </div>
+
+                <div>
+
+                  <span>
+                    FOOD
+                  </span>
+
+                  <strong>
+                    Japanese Market
+                  </strong>
+
+                  <small>
+                    East Village
+                  </small>
+
+                  <button
+                    class="add-to-plan-button"
+                    data-title="Japanese Market"
+                  >
+                    + Add
+                  </button>
+
+                </div>
+
+              </article>
+
+
+              <article class="saved-mini-card">
+
+                <div class="saved-mini-image">
+
+                  <div
+                    class="asset-placeholder
+                           asset-placeholder--poster"
+                  >
+                    EVENT
+                  </div>
+
+                </div>
+
+                <div>
+
+                  <span>
+                    COMEDY
+                  </span>
+
+                  <strong>
+                    Basement Comedy
+                  </strong>
+
+                  <small>
+                    Greenwich Village
+                  </small>
+
+                  <button
+                    class="add-to-plan-button"
+                    data-title="Basement Comedy"
+                  >
+                    + Add
+                  </button>
+
+                </div>
+
+              </article>
+
+            </div>
+
+
+            <button
+              class="browse-button"
+              id="browseButton"
+            >
+              Find More Things →
+            </button>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SAVED PANEL
+    ========================================== -->
+
+    <section
+      class="dashboard-panel"
+      id="savedPanel"
+      data-dashboard-panel="saved"
+    >
+
+      <div class="container">
+
+        <div class="panel-heading">
+
+          <div>
+            <p class="eyebrow">
+              KEEP THIS
+            </p>
+
+            <h2>
+              Saved
+            </h2>
+
+            <p>
+              Events, restaurants, weird little
+              places and whatever else caught your eye.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="saved-filter-bar">
+
+          <button class="saved-filter active">
+            Everything
+          </button>
+
+          <button class="saved-filter">
+            Events
+          </button>
+
+          <button class="saved-filter">
+            Food
+          </button>
+
+          <button class="saved-filter">
+            Bars
+          </button>
+
+          <button class="saved-filter">
+            Places
+          </button>
+
+        </div>
+
+
+        <div class="saved-grid">
+
+          <article class="saved-card">
+
+            <div class="saved-card-image">
+
+              <div
+                class="asset-placeholder
+                       asset-placeholder--poster"
+              >
+                EVENT POSTER
+              </div>
+
+            </div>
+
+            <div class="saved-card-content">
+
+              <span class="save-type">
+                NIGHTLIFE
+              </span>
+
+              <h3>
+                Rooftop Party
+              </h3>
+
+              <p>
+                Williamsburg · Brooklyn
+              </p>
+
+              <div class="saved-card-actions">
+
+                <button>
+                  + Add to Plan
+                </button>
+
+                <button
+                  aria-label="Remove saved item"
+                >
+                  ♥
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="saved-card">
+
+            <div class="saved-card-image">
+
+              <div
+                class="asset-placeholder
+                       asset-placeholder--photo"
+              >
+                PLACE PHOTO
+              </div>
+
+            </div>
+
+            <div class="saved-card-content">
+
+              <span class="save-type">
+                FOOD
+              </span>
+
+              <h3>
+                Japanese Market
+              </h3>
+
+              <p>
+                East Village · Manhattan
+              </p>
+
+              <div class="saved-card-actions">
+
+                <button>
+                  + Add to Plan
+                </button>
+
+                <button>
+                  ♥
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="saved-card">
+
+            <div class="saved-card-image">
+
+              <div
+                class="asset-placeholder
+                       asset-placeholder--poster"
+              >
+                EVENT FLYER
+              </div>
+
+            </div>
+
+            <div class="saved-card-content">
+
+              <span class="save-type">
+                COMEDY
+              </span>
+
+              <h3>
+                Basement Comedy
+              </h3>
+
+              <p>
+                Greenwich Village · Manhattan
+              </p>
+
+              <div class="saved-card-actions">
+
+                <button>
+                  + Add to Plan
+                </button>
+
+                <button>
+                  ♥
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         UPLOADS PANEL
+    ========================================== -->
+
+    <section
+      class="dashboard-panel"
+      id="uploadsPanel"
+      data-dashboard-panel="uploads"
+    >
+
+      <div class="container">
+
+        <div class="panel-heading">
+
+          <div>
+            <p class="eyebrow">
+              CONTRIBUTIONS
+            </p>
+
+            <h2>
+              Things You've Added
+            </h2>
+
+            <p>
+              Events, places and things to do
+              you've contributed to the site.
+            </p>
+          </div>
+
+          <button
+            class="primary-button open-submit-event"
+          >
+            + Add Something
+          </button>
+
+        </div>
+
+
+        <div class="uploads-table">
+
+          <div class="upload-table-header">
+
+            <span>Submission</span>
+            <span>Type</span>
+            <span>Status</span>
+            <span>Views</span>
+            <span></span>
+
+          </div>
+
+
+          <article class="upload-row">
+
+            <div class="upload-main">
+
+              <div class="upload-thumb">
+                <div class="asset-placeholder">
+                  IMG
+                </div>
+              </div>
+
+              <div>
+                <strong>
+                  Astoria Block Party
+                </strong>
+
+                <small>
+                  Aug 30 · Astoria
+                </small>
+              </div>
+
+            </div>
+
+            <span>
+              Event
+            </span>
+
+            <span class="status-approved">
+              Live
+            </span>
+
+            <span>
+              438
+            </span>
+
+            <button>
+              •••
+            </button>
+
+          </article>
+
+
+          <article class="upload-row">
+
+            <div class="upload-main">
+
+              <div class="upload-thumb">
+                <div class="asset-placeholder">
+                  IMG
+                </div>
+              </div>
+
+              <div>
+                <strong>
+                  Hidden Garden Café
+                </strong>
+
+                <small>
+                  Bushwick
+                </small>
+              </div>
+
+            </div>
+
+            <span>
+              Place
+            </span>
+
+            <span class="status-review">
+              In Review
+            </span>
+
+            <span>
+              —
+            </span>
+
+            <button>
+              •••
+            </button>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FRIENDS PANEL
+    ========================================== -->
+
+    <section
+      class="dashboard-panel"
+      id="friendsPanel"
+      data-dashboard-panel="friends"
+    >
+
+      <div class="container">
+
+        <div class="panel-heading">
+
+          <div>
+
+            <p class="eyebrow">
+              YOUR CREW
+            </p>
+
+            <h2>
+              Friends
+            </h2>
+
+            <p>
+              Make plans together without sending
+              47 screenshots into the group chat.
+            </p>
+
+          </div>
+
+          <button class="primary-button">
+            + Find Friends
+          </button>
+
+        </div>
+
+
+        <div class="friends-grid">
+
+          <article class="friend-card">
+
+            <div class="friend-large-avatar">
+              M
+            </div>
+
+            <div>
+              <strong>Maya</strong>
+              <span>@maya</span>
+            </div>
+
+            <button>
+              Make a Plan
+            </button>
+
+          </article>
+
+
+          <article class="friend-card">
+
+            <div class="friend-large-avatar">
+              C
+            </div>
+
+            <div>
+              <strong>Chris</strong>
+              <span>@chrisnyc</span>
+            </div>
+
+            <button>
+              Make a Plan
+            </button>
+
+          </article>
+
+
+          <article class="friend-card">
+
+            <div class="friend-large-avatar">
+              A
+            </div>
+
+            <div>
+              <strong>Alex</strong>
+              <span>@alexoutside</span>
+            </div>
+
+            <button>
+              Make a Plan
+            </button>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       SUBMIT EVENT / PLACE MODAL
+  ========================================== -->
+
+  <div
+    class="modal-backdrop hidden"
+    id="submitModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="submitModalTitle"
+  >
+
+    <div class="modal">
+
+      <button
+        class="modal-close"
+        id="closeSubmitModal"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-heading">
+
+        <p class="eyebrow">
+          ADD TO THE CITY
+        </p>
+
+        <h2 id="submitModalTitle">
+          Submit Something
+        </h2>
+
+        <p>
+          Found something worth knowing about?
+          Put it on the board.
+        </p>
+
+      </div>
+
+
+      <form id="submissionForm">
+
+
+        <fieldset class="submission-type">
+
+          <legend>
+            What are you adding?
+          </legend>
+
+          <label>
+
+            <input
+              type="radio"
+              name="submissionType"
+              value="event"
+              checked
+            />
+
+            <span>
+              <strong>Event</strong>
+              <small>
+                Something happening at a specific time.
+              </small>
+            </span>
+
+          </label>
+
+
+          <label>
+
+            <input
+              type="radio"
+              name="submissionType"
+              value="place"
+            />
+
+            <span>
+              <strong>Place</strong>
+              <small>
+                Somewhere worth visiting.
+              </small>
+            </span>
+
+          </label>
+
+
+          <label>
+
+            <input
+              type="radio"
+              name="submissionType"
+              value="activity"
+            />
+
+            <span>
+              <strong>Thing to Do</strong>
+              <small>
+                An activity or experience.
+              </small>
+            </span>
+
+          </label>
+
+        </fieldset>
+
+
+        <div class="form-grid">
+
+          <label class="full-width">
+            Name
+
+            <input
+              type="text"
+              id="submissionName"
+              placeholder="What's happening?"
+              required
+            />
+          </label>
+
+
+          <label>
+            Borough
+
+            <select required>
+              <option value="">
+                Choose borough
+              </option>
+
+              <option>Manhattan</option>
+              <option>Brooklyn</option>
+              <option>Queens</option>
+              <option>The Bronx</option>
+              <option>Staten Island</option>
+            </select>
+          </label>
+
+
+          <label>
+            Neighborhood
+
+            <input
+              type="text"
+              placeholder="Astoria"
+            />
+          </label>
+
+
+          <label class="event-only-field">
+            Date
+
+            <input
+              type="date"
+            />
+          </label>
+
+
+          <label class="event-only-field">
+            Start Time
+
+            <input
+              type="time"
+            />
+          </label>
+
+
+          <label>
+            Price
+
+            <input
+              type="text"
+              placeholder="$0 / Free"
+            />
+          </label>
+
+
+          <label>
+            Category
+
+            <select>
+              <option>Nightlife</option>
+              <option>Music</option>
+              <option>Food</option>
+              <option>Art</option>
+              <option>Comedy</option>
+              <option>Outdoors</option>
+              <option>Community</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+
+          <label class="full-width">
+            Address
+
+            <input
+              type="text"
+              placeholder="123 Somewhere St"
+            />
+          </label>
+
+
+          <label class="full-width">
+            Description
+
+            <textarea
+              rows="5"
+              placeholder="Tell people why they should care..."
+            ></textarea>
+          </label>
+
+
+          <label class="full-width">
+            Event / Place URL
+
+            <input
+              type="url"
+              placeholder="https://"
+            />
+          </label>
+
+
+          <div class="full-width upload-image-field">
+
+            <span>
+              Cover Image
+            </span>
+
+            <button type="button">
+              + Upload Image
+            </button>
+
+            <small>
+              FUTURE: Connect to Supabase Storage.
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <div class="submission-footer">
+
+          <p>
+            Submissions may be reviewed before going live.
+          </p>
+
+          <button
+            type="submit"
+            class="primary-button"
+          >
+            Submit →
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       ADD STOP MODAL
+  ========================================== -->
+
+  <div
+    class="modal-backdrop hidden"
+    id="stopModal"
+  >
+
+    <div class="modal modal-small">
+
+      <button
+        class="modal-close"
+        id="closeStopModal"
+      >
+        ×
+      </button>
+
+      <p class="eyebrow">
+        KEEP THE DAY GOING
+      </p>
+
+      <h2>
+        Add a Stop
+      </h2>
+
+      <form id="addStopForm">
+
+        <label>
+          Name
+
+          <input
+            type="text"
+            id="newStopName"
+            placeholder="Restaurant, event, bar..."
+            required
+          />
+        </label>
+
+        <label>
+          Time
+
+          <input
+            type="time"
+            id="newStopTime"
+            required
+          />
+        </label>
+
+        <label>
+          Neighborhood
+
+          <input
+            type="text"
+            id="newStopNeighborhood"
+            placeholder="Lower East Side"
+          />
+        </label>
+
+        <button
+          class="primary-button"
+          type="submit"
+        >
+          Add to Plan →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <script src="profile.js"></script>
+
+</body>
+</html>
